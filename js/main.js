@@ -3,9 +3,7 @@ function nombreLlamado(persona){
     alert("Bienvenidos "+ nombre + " a Radioactiv, tu tienda de ropa.\nEn nuestra tiendas vas a encontra lo que estes buscando con la mejor calidad.")
 }
 nombreLlamado(nombre)
-
 let menu
-
 do{
     menu = prompt("Menu de inicio\n\nNuestro catalogo de ropa por el momento solo tiene 4 productos a la venta, para ver mas en detalle cada uno de ellos ingresa alguna de las siguientes palabras:\n\nPantalones\nRemeras\nBuzos\nZapatillas\n\nSalir, si no desea ver mas.").toLowerCase()
 if (menu === "salir") {
