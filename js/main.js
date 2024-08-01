@@ -136,23 +136,11 @@ const carrito = []
 
 let nombre = prompt("Ingrese su nombre por favor.")
 
-
-do {
-    alert("no es nombre")
-    nombre = prompt("Ingrese su nombre por favor.")
-
-} while (nombre != null);
-
-
 function nombreLlamado(){
     alert("Bienvenidos "+ nombre + " a Radioactiv, tu tienda de ropa.\nEn nuestra tiendas vas a encontra lo que estes buscando con la mejor calidad.")
 }
 
-
 nombreLlamado(nombre)
-
-
-
 
 let menu
 
