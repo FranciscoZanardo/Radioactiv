@@ -17,17 +17,14 @@ const arrayPantalones = [
 const arrayRemeras = [
     {
     nombre: "Remeras Oversize",
-    descripcion: "Las remeras oversize son prendas de vestir diseñadas con un corte holgado y amplio, conocidas por su estilo cómodo y casual que proporciona una apariencia relajada y moderna.",
     precio: 11000,
     },
     {
     nombre: "Remeras estilo Polo",
-    descripcion: "Las remeras estilo polo son prendas clásicas que se caracterizan por su cuello tipo solapa y botones en el cuello, ofreciendo un equilibrio entre casualidad y formalidad, ideales para un look deportivo o semiformal.",
     precio: 15900,
     },
     {
     nombre: "Remeras Lisas",
-    descripcion: "Las remeras estilo liso son prendas básicas y versátiles, generalmente sin estampados ni diseños complejos, ideales para crear looks minimalistas y elegantes, adecuadas para diversas ocasiones informales.",
     precio: 8500,
     }
 ]
@@ -35,12 +32,10 @@ const arrayRemeras = [
 const arrayBuzos = [
     {
     nombre: "Buzos hoodie",
-    descripcion: "Los buzos hoodie tienen una capucha ajustable y bolsillos frontales, ideal para un look casual y cómodo.",
     precio: 20000,
     },
     {
     nombre: "Buzos crewneck",
-
     precio: 18000,
     },
     {
@@ -55,17 +50,14 @@ const arrayZapatillas = [
         modelo: [
             {
                 nombre: "Air Max",
-                descripcion: "Conocidas por su unidad de aire visible en la suela.",
                 precio: 55000
             },
             { 
                 nombre: "Air Force 1",
-                descripcion: "Un clásico del estilo urbano.",
                 precio: 75500
             },
             { 
                 nombre: "Nike Blazer",
-                descripcion: "Un clásico retro que combina estilo y comodidad.",
                 precio: 62000
             }
             ]
@@ -75,17 +67,14 @@ const arrayZapatillas = [
         modelo: [
             { 
                 nombre: "Adidas NMD",
-                descripcion: "Una combinación de estilo urbano y tecnología Boost, populares en la moda streetwear.",
                 precio: 80000
             },
             {
                 nombre: "Adidas Superstar",
-                descripcion: "Famosas por su estilo icónico en la moda urbana y el baloncesto.",
                 precio: 39000
             },
             {
                 nombre: "Adidas Yeezy",
-                descripcion: "Diseñadas en colaboración con Kanye West, destacan por su estilo único y su gran demanda en el mercado.",
                 precio: 75000
             }
             ]
@@ -95,17 +84,14 @@ const arrayZapatillas = [
         modelos: [
             {
                 nombre: "Vans Old Skool",
-                descripcion: "Con la icónica banda lateral, son conocidas por su durabilidad y estilo clásico.",
                 precio: 57000
             },
             {
                 nombre: "Vans Sk8-Hi",
-                descripcion: "Unas zapatillas altas que ofrecen mayor soporte y protección, populares en el mundo del skate.",
                 precio: 74000
             },
             {
                 nombre: "Vans Authentic",
-                descripcion: "El diseño original de Vans, simple y versátil, ideal para cualquier ocasión.",
                 precio: 24000
             }
             ]
@@ -115,17 +101,14 @@ const arrayZapatillas = [
         modelos: [
             {
                 nombre: "DC Trase",
-                descripcion: "Simples y elegantes, perfectas para el uso diario con un estilo casual.",
                 precio: 15900
             },
             {
                 nombre: "DC Pure",
-                descripcion: "Con una construcción robusta y protección adicional, son ideales para el skateboarding.", 
                 precio: 54500
             },
             {
                 nombre: "DC Manteca",
-                descripcion: "Diseñadas para la comodidad y el estilo, ofrecen una buena amortiguación y soporte para el skate urbano.",
                 precio: 84000
             }
         ]
