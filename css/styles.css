@@ -1,0 +1,65 @@
+#container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url(../imagenes/amarillo.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.card {
+    width: 10rem;
+    border: solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.cardCarrito {
+    width: 10rem;
+    border: solid black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+#carrito {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    background-image: url(../imagenes/amarillo.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+button {
+    height: 2rem;
+    background-color: rgb(94, 255, 0);
+}
+
+h1 {
+    font-size: 4rem;
+    margin: 0% 0% 0% 0%;
+}
+
+#hoja-carrito {
+    background-color: rgb(83, 83, 83);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-carrito {
+    background-color: aqua;
+}
+
+.logotipo {
+    padding: 0%;
+    width: 5rem;
+    height: 5rem;
+}
