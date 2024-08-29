@@ -1,0 +1,134 @@
+[
+    {
+        "marca": "REMERAS",
+        "nombre": "OVERSIZE RELAX WASHED",
+        "precio": 11000,
+        "img": "imagenes/imageremera.png"
+    },
+    {
+        "marca": "REMERAS",
+        "nombre": "OVERSIZE WASHED"   ,
+        "precio": 11000,
+        "img": "imagenes/imageremera2.png"
+    },
+    {
+        "marca": "REMERAS",
+        "nombre": "OVERSIZE RICK and MORTY",
+        "precio": 11000,
+        "img": "imagenes/imageremera3.png"
+    },
+    {
+        "marca": "REMERAS",
+        "nombre": "OVERSIZE RELAX JAPAN",
+        "precio": 11000,
+        "img": "imagenes/imageremera4.png"
+    },
+    {
+        "marca": "REMERAS",
+        "nombre": "OVERSIZE WASHED TUPAC LIFE",
+        "precio": 11000,
+        "img": "imagenes/imageremera5.png"
+    },
+    {
+        "marca": "BUZOS",
+        "nombre": "VALHALLA SKULL HOODIE total black",
+        "precio": 32000,
+        "img": "imagenes/buzo1.png"
+    },
+    {
+        "marca": "BUZOS",
+        "nombre": "UIJA HOODIE total black",
+        "precio": 37000,
+        "img": "imagenes/buzo2.jpg"
+    },
+    {
+        "marca": "BUZOS",
+        "nombre": "ZOLTAR MYSTIFYING con capucha",
+        "precio": 38000,
+        "img": "imagenes/buzo3.png"
+    },
+    {
+        "marca": "BUZOS",
+        "nombre": "Hoodie Oversize Hombre Estampado",
+        "precio": 35000,
+        "img": "imagenes/buzo4.png"
+    },
+    {
+        "marca": "BUZOS",
+        "nombre": "Hoodie Skullthor",
+        "precio": 39000,
+        "img": "imagenes/buzo5.png"
+    },
+    {
+        "marca": "LE COQ SPORTIF",  
+        "nombre": "Lcs R1100 Street Marron Amarillo",
+        "precio": 98000,
+        "img": "imagenes/imagelacoq1.png"
+    },
+    { 
+        "marca": "LE COQ SPORTIF",
+        "nombre": "Lcs R1100 OG Blanco Gris",
+        "precio": 87500,
+        "img": "imagenes/imagelacoq2.png"
+    },
+    { 
+        "marca": "LE COQ SPORTIF",
+        "nombre": "Lcs R1100 Nineties Blanco Rosa",
+        "precio": 90000,
+        "img": "imagenes/imagelacoq3.png"
+    },
+    {
+        "marca": "CONVERSE",
+        "nombre": "Star Player Ox Bordo",
+        "precio": 110000,
+        "img": "imagenes/imageconverse1.png"
+    },
+    {
+        "marca": "CONVERSE",
+        "nombre": "Chuck Taylor Hi Negro",
+        "precio": 79500,
+        "img": "imagenes/imageconverse2.png"
+    },
+    {
+        "marca": "CONVERSE",
+        "nombre": "Chuck Taylor Core Negro",
+        "precio": 72000,
+        "img": "imagenes/imageconverse3.png"
+    },
+    {
+        "marca": "vans",
+        "nombre": "old school negra",
+        "precio": 107500,
+        "img": "imagenes/imagevans1.png"
+    },
+    {
+        "marca": "Vans",
+        "nombre": "Skate Old Skool Celeste Blanco",
+        "precio": 174000,
+        "img": "imagenes/imagenvans2.png"
+    },
+    {
+        "marca": "Vans",
+        "nombre": "Skate Grosso Mid Negro Blanco",
+        "precio": 178000,
+        "img": "imagenes/imagevans3.png"
+    },
+    {
+        "marca": "DC",
+        "nombre": "Pure Negro Negro",
+        "precio": 144000,
+        "img": "imagenes/imagedc1.png"
+    },
+    {
+        "marca": "DC",
+        "nombre": "Pensford Tx SS Blanco Azul Rojo",
+        "precio": 114500,
+        "img": "imagenes/imagedc2.png"
+    },
+    {
+        "marca": "DC",
+        "nombre": "Manteca 3 Se Blanco Negro",
+        "precio": 124000,
+        "img": "imagenes/imagedc3.png"    
+    }
+]

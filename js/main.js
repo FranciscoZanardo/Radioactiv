@@ -1,92 +1,9 @@
-const productos = [
-    {
-        marca: "Remera",
-        nombre: "Oversize",
-        precio: 11000,
-    },
-    {
-        marca: "Remera",
-        nombre: "Lisas",
-        precio: 8500,
-    },
-    {
-        marca: "Buzos",
-        nombre: "oversize",
-        precio: 20000,
-    },
-    {
-        marca: "Buzos",
-        nombre: "crewneck",
-        precio: 18000,
-    },
-    {
-        marca: "nike",  
-        nombre: "Air Max",
-        precio: 55000
-    },
-    { 
-        marca: "nike",
-        nombre: "Air Force 1",
-        precio: 75500
-    },
-    { 
-        marca: "nike",
-        nombre: "Nike Blazer",
-        precio: 62000
-    },
-    {
-        marca: "adidas",
-        nombre: "Adidas NMD",
-        precio: 80000
-    },
-    {
-        marca: "Adidas",
-        nombre: "Adidas Superstar",
-        precio: 39000
-    },
-    {
-        marca: "Adidas",
-        nombre: "Adidas Yeezy",
-        precio: 75000
-    },
-    {
-        marca: "vans",
-        nombre: "Vans Old Skool",
-        precio: 57000
-    },
-    {
-        marca: "Vans",
-        nombre: "Vans Sk8-Hi",
-        precio: 74000
-    },
-    {
-        marca: "Vans",
-        nombre: "Vans Authentic",
-        precio: 24000
-    },
-    {
-        marca: "DC",
-        nombre: "DC Trase",
-        precio: 15900
-    },
-    {
-        marca: "DC",
-        nombre: "DC Pure",
-        precio: 54500
-    },
-    {
-        marca: "DC",
-        nombre: "DC Manteca",
-        precio: 84000
-    }
-];
-
-
 let carrito;
 
 localStorage.getItem("carrito") ? carrito = JSON.parse(localStorage.getItem("carrito")) : carrito = [];
 
 const container = document.getElementById("container");
+const visible = document.getElementsByClassName("visible")
 
 function botonAgregarCarrito (productos) {
     if (carrito.some(el => el.nombre === productos.nombre)) {
@@ -118,7 +35,7 @@ function cardsDeProdcutos (productos) {
     card.className = "card";
 
     const imagen = document.createElement("img");
-    imagen.src = "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg";
+    imagen.src = productos.img;
     imagen.className = "img";
 
     const tituloMarca = document.createElement("h3");
@@ -133,6 +50,7 @@ function cardsDeProdcutos (productos) {
     const botonAgregar = document.createElement("button");
     botonAgregar.innerText = `AGREGAR AL CARRITO`;
     botonAgregar.onclick = () => {botonAgregarCarrito(productos)};
+    botonAgregar.className = "boton-agregar"
     
     card.append(tituloMarca);
     card.append(imagen)
@@ -154,7 +72,7 @@ function cardParaCarrito (productos) {
     tituloMarca.innerText = productos.marca;
     
     const imagen = document.createElement("img");
-    imagen.src = "https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg";
+    imagen.src = productos.img;
     imagen.className = "img";
     
     const parrafoProducto = document.createElement("p");
@@ -165,17 +83,19 @@ function cardParaCarrito (productos) {
 
     const subtotales = document.createElement("p");
     if (productos.cantidad > 1) {
-        subtotales.innerText = `$${productos.subtotal}`;
-    }
+        subtotales.innerText = `$${productos.subtotal}`
+    };
 
     const parrafoPrecio = document.createElement("p");   
     parrafoPrecio.innerText = `$${productos.precio}`;
     
     const botonBorrar = document.createElement("button");
     botonBorrar.innerText = `ELIMINAR PRODUCTO`;
+    botonBorrar.className = "boton-agregar";
     botonBorrar.onclick = () => {
         carrito = carrito.filter(el => el.nombre !== productos.nombre);
         localStorage.setItem("carrito", JSON.stringify(carrito));
+        card.remove();
     };
     
     card.append(tituloMarca);
@@ -186,24 +106,32 @@ function cardParaCarrito (productos) {
     card.append(subtotales)
     card.append(botonBorrar);
     
-    fondoCarrito.append(card)
+    fondoCarrito.append(card);
 };
 
-productos.forEach(el => {cardsDeProdcutos(el);});
-
+fetch('./data.json')
+    .then(Response => Response.json())
+    .then(data => {
+        data.forEach(el => {cardsDeProdcutos(el);});
+    })
+    .catch(error => console.log(error))
+    .catch(error => console.log(error))
+    
 const mostrarCarrito = document.createElement("button");
-mostrarCarrito.innerText = `MOSTRAR MI CARRITO`;
+mostrarCarrito.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+<path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+</svg>`;
 mostrarCarrito.onclick = () => {
-    fondoCarrito.innerHTML = ""
-    if (carrito.length > 0) {
-        carrito.forEach(el => {cardParaCarrito(el)})
-    } else {
-        Toastify({
-            text: `El carrito esta vacio`,
-            gravity: "bottom",
-            duration: 3000
-        }).showToast();
-    }
+        fondoCarrito.innerHTML = ""
+        if (carrito.length > 0) {
+            carrito.forEach(el => {cardParaCarrito(el)})
+        } else {
+            Toastify({
+                text: `El carrito esta vacio`,
+                gravity: "bottom",
+                duration: 3000
+            }).showToast();
+        }
 };
 mostrarCarrito.className = "menu-carrito";
 

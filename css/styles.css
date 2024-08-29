@@ -1,60 +1,94 @@
-#container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&family=Rubik+Glitch&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
     background-image: url(../imagenes/amarillo.png);
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
 }
 
-.card {
-    width: 10rem;
-    border: solid black;
-    text-align: center;
+#container {
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
-    margin: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.cardCarrito {
-    width: 10rem;
-    border: solid black;
+.card {
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(228, 224, 0, 0.658);
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    overflow: hidden;
     text-align: center;
     display: flex;
     flex-direction: column;
     margin: 1rem;
+    cursor: default;
+    transition: all 400ms ease;
+}
+.card:hover {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: scale(1.1);
+}
+.card img {
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    object-fit: cover;
 }
 
 #carrito {
     text-align: center;
     display: flex;
     flex-direction: row;
-    background-image: url(../imagenes/amarillo.png);
+    flex-wrap: wrap;
     background-repeat: no-repeat;
     background-size:cover;
     background-attachment: fixed;
+    background-color: rgba(51, 51, 51, 0.6);
+    gap: 30px;
 }
 
-button {
-    height: 2rem;
-    background-color: rgb(94, 255, 0);
+.boton-agregar {
+    height: 3rem;
+    background-color: rgb(0, 0, 0);
+    border: none;
+    color: aliceblue;
+    transition: all 400ms ease;
+    cursor: pointer;
+}
+
+.boton-agregar:hover {
+    box-shadow: 5px 5px 20px rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 251, 0.63);
+    color: rgb(3, 3, 3);
+    transform: scale(1.5);
 }
 
 h1 {
     font-size: 4rem;
     margin: 0% 0% 0% 0%;
+    font-family: "Rubik Glitch", system-ui;
+    font-weight: 400;
+    font-style: normal
 }
 
 #hoja-carrito {
-    background-color: rgb(83, 83, 83);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 1rem 1rem 0 1rem;
 }
 
 .menu-carrito {
+    height: 2rem;
     background-color: aqua;
 }
 
@@ -62,4 +96,14 @@ h1 {
     padding: 0%;
     width: 5rem;
     height: 5rem;
+}
+
+.menu-carrito {
+    background-color: rgba(5, 5, 5, 0.747); 
+    border: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
 }
